@@ -36,11 +36,15 @@
                 // マーカーをセット
                 markerObj.setMap(mapObj);
                 alert("経度:" + e.latLng.lat() + "  緯度:" + e.latLng.lng());
+                // hiddenタグで書いておく
+                var hiddenTag = '<input type="hidden" value="'+ e.latLng.lat() + '"><input type="hidden" value="'+ e.latLng.lng() + '">';
+                document.getElementById("str").innerHTML=hiddenTag;
             })
         });
     </script>
 </head>
 <body>
 <div id="gmap" style="width: 500px; height: 370px; border: 1px solid Gray;"></div>
+<div id="str"></div>
 </body>
 </html>
